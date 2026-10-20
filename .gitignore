@@ -1,0 +1,24 @@
+# Build output
+target/
+*.class
+*.jar
+*.war
+
+# IDEs (Eclipse/STS, IntelliJ, VS Code)
+.classpath
+.project
+.factorypath
+.settings/
+.springBeans
+.sts4-cache/
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and secrets
+*.log
+.env

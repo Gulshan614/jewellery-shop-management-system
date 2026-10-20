@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: jewellery-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: jewellery_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # Needed from Step 5 (Kafka). Safe to leave running or comment out until then.
+  kafka:
+    image: apache/kafka:3.8.0
+    container_name: jewellery-kafka
+    ports:
+      - "9092:9092"
+
+volumes:
+  mysql_data:
